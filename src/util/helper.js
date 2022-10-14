@@ -14,7 +14,7 @@ function timing() {
     const month = today.getMonth()+1
     console.log(`today date is ${day}`);
     console.log(`current month are ${month}`);
-    return "time bhi set ho gya"
+    return "Time also set"
 }
 //timing()
 
