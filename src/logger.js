@@ -5,6 +5,19 @@ let printSomething = function() {
     return "done"
 }
 
-let abc = 2022
+//- welcome() -> prints ‘Welcome to my application. I am <name> and a part of FunctionUp Plutonium cohort.’ on console
+//Call welcome in route.js inside the test-me handler
+
+let name="pratibha"
+let welcome=function(){
+    console.log (`Welcome to my application. I am ${name} and a part of FunctionUp Plutonium cohort.`)
+    return "hogaya"
+}
+//welcome("pratibha")
+
+
+
+
 module.exports.myUrl = url
 module.exports.myFunction = printSomething
+module.exports.myWelcome=welcome
