@@ -1,6 +1,17 @@
 const express = require('express');
 const abc = require('../introduction/intro')
 const router = express.Router();
+const file = require('../movie/movies')
+
+
+router.get('/movies',file.moviess)
+
+router.get('/movies/:moviesIndex',file.indexNumber)
+
+router.get('/films',file.films2)
+
+router.get('/films/:filmId',file.filmIn)
+
 
 router.get('/test-me', function (req, res) {
     console.log('My batch is', abc.name)
