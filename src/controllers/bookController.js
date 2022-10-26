@@ -3,7 +3,7 @@ const BookModel=require("../models/bookModel")
 
 let createBook=async function(req,res){
     let data=req.body
-    let saveData=await BookModel.create(data)
+    let saveData= await BookModel.create(data)
     res.send({msg:saveData,status:true})
 }
 //==================================================================================================
@@ -27,10 +27,9 @@ let getParticularBook=async function(req,res){
 }
 //======================================================================
 let getXINRBooks=async function(req,res){
-    let allXINR=await BookModel.find({indianPrice: { $in:[ "100INR", "200INR", "500INR"]    } })
-    res.send({msg:allXINR,status:true})
-    //let returnallbooks= await BookModel.find({$or:[{"prices.indianPrice":{$eq:"100INR"}},{"prices.indianPrice":{$eq:"200INR"}},{"prices.indianPrice":{$eq:"500INR"}}]})
-    //res.send({msg: returnallbooks})
+    let returnallbooks= await BookModel.find({$or:[{"prices.indianPrice":{$eq:"100INR"}},{"prices.indianPrice":{$eq:"200INR"}},{"prices.indianPrice":{$eq:"500INR"}}]})
+    res.send({msg: returnallbooks})
+
 
 }
 
