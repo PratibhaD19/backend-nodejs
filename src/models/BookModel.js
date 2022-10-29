@@ -5,12 +5,14 @@ const mongoose = require('mongoose')
 let bookSchema = new mongoose.Schema({
  
     bookName: String,
-    authorName: String,
+    authorName: {
+        type:String
+},
     category: String,
     year: Number
 
 
-})
+},{timestamps:true})
 
 
 
@@ -18,4 +20,4 @@ let bookSchema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model('Book Model', bookSchema)
+module.exports = mongoose.model('BookModel', bookSchema)  //BookModels
